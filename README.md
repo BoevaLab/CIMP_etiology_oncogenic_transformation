@@ -46,7 +46,7 @@ What data to download to replace the placeholders:
 - directory = files can be downloaded from the UCSC Xena data portal, under the sections "gene expression RNAseq - HTSeq - Counts" for all analyzed cancer types. For example, the file for ACC is [this file](https://xenabrowser.net/datapages/?dataset=TCGA-ACC.htseq_counts.tsv&host=https%3A%2F%2Fgdc.xenahubs.net&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443).
 - file_clust = the folder where the cluster memberships generated with `Deciphering_CIMP_Analysis.ipynb` are saved.
 
-##### UPDATE AFTER REVIEW: EASE score (inspired from DAVID) analysis
+#### UPDATE AFTER REVIEW: EASE score (inspired from DAVID) analysis
 To use the updated versions of the GO Biological Processes and Kegg databases in the gene set enrichment analysis, the EASE score used in the DAVID method[DAVID] was reimplemented in the `DAVID_analysis.ipynb` file. 
 
 What data to download to replace the placeholders:
@@ -57,4 +57,4 @@ What data to download to replace the placeholders:
 - downstream_gene_path_dir: path to the folder to save the results of the analysis.
 
 #### UPDATE AFTER REVIEW: Supplementary information 
-In the archive `Supplementary_information.zip`, you will find the methylation cluster membership, silhouette score and CIMP score of all the analyzed patients in TCGA. Cluster membership and silhouette scores are in the `methylation_cluster_membership_all_TCGA.csv` file, in columns "Cluster" and "Sil_orig". The CIMP scores are saved in a single file per cancer. 
+In the archive `Supplementary_information.zip`, you will find the methylation cluster membership, silhouette score and CIMP score of all the analyzed patients in TCGA. You will also find the full list of enriched pathways discovered with the EASE score analysis for LGG and LIHC. Cluster membership and silhouette scores are in the `methylation_cluster_membership_all_TCGA.csv` file, in columns "Cluster" and "Sil_orig". The CIMP scores are saved in a single file per cancer in the `CIMPness` folder. The LGG and LIHC EASE score results are saved in a single file per cancer in the `EASE` folder.
