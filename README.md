@@ -33,6 +33,7 @@ What data to download to replace the placeholders:
 - cluster_memb_dir, sign_cpg_dir, bac_pred_dir = path to the folder to save the cluster memberships, significantly differentially methylated probes, balanced accuracy predictions in
 - gencode_annot_gene and merged_table = preprocessed gencode annotation mappings that give the associated length and the mapping between the old and new versions of gencode annotations. These are given in the repository in the zip file in the folder `gencode_annotations`. 
 - immune_scores, CIBERSORT_comp = these files correspond to files generated in [this paper](https://www.sciencedirect.com/science/article/pii/S1074761318301213?via%3Dihub). The files were downloaded from the GDC [here](https://gdc.cancer.gov/about-data/publications/panimmune). Immune_scores corresponds to the `Scores_160_Signatures.tsv.gz` file. CIBERSORT_comp corresponds to the `TCGA.Kallisto.fullIDs.cibersort.relative.tsv` file. 
+- xcell_comp = this file corresponds to the file generated using [this paper](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-017-1349-1). The file corresponds to the file downloadable from [here](https://xcell.ucsf.edu/) under the link for precomputed TCGA xCell scores.
 -  thorsson_pat_info = this file corresponds to the file generated in [this paper](https://www.sciencedirect.com/science/article/pii/S1074761318301213?via%3Dihub). It corresponds to the Table S1 file.
 -  diff_gex_dir = this is the folder where the results of DESeq2 analysis are saved (see paragraph below).
 -  diff_gex_offgene_dir = folder to save the official gene codes for genes that correspond to "potential downstream events" (cf. Methods of the paper). *IMPORTANT: these are the files that are inputted into the [DAVID](https://david.ncifcrf.gov/summary.jsp) tool for the gene set enrichment analysis. UPDATE AFTER REVIEW: These files are used for the EASE score analysis in `DAVID_analysis.ipynb`.*
@@ -50,11 +51,11 @@ What data to download to replace the placeholders:
 To use the updated versions of the GO Biological Processes and Kegg databases in the gene set enrichment analysis, the EASE score used in the DAVID method[DAVID] was reimplemented in the `DAVID_analysis.ipynb` file. 
 
 What data to download to replace the placeholders:
-- meth_dir: path to the folder where you saved your preprocessed methylation data.
-- kegg_file: path to the MSigDB `.gmt` file for the Kegg pathways downloaded from https://www.gsea-msigdb.org/gsea/downloads.jsp#msigdb (file `c2.cp.kegg.v7.4.symbols.gmt`).
-- GOBP_file: path to the MSigDB `.gmt` file for the Gene Ontology Biological Processes pathways downloaded from https://www.gsea-msigdb.org/gsea/downloads.jsp#msigdb (file `c5.go.bp.v7.4.symbols.gmt`).
-- diff_gex_offgene_dir: path to the folder with the official gene codes for genes that correspond to "potential downstream events" (cf `Deciphering_CIMP_Analysis.ipynb` documentation). 
-- downstream_gene_path_dir: path to the folder to save the results of the analysis.
+- meth_dir =  path to the folder where you saved your preprocessed methylation data.
+- kegg_file =  path to the MSigDB `.gmt` file for the Kegg pathways downloaded from https://www.gsea-msigdb.org/gsea/downloads.jsp#msigdb (file `c2.cp.kegg.v7.4.symbols.gmt`).
+- GOBP_file =  path to the MSigDB `.gmt` file for the Gene Ontology Biological Processes pathways downloaded from https://www.gsea-msigdb.org/gsea/downloads.jsp#msigdb (file `c5.go.bp.v7.4.symbols.gmt`).
+- diff_gex_offgene_dir = path to the folder with the official gene codes for genes that correspond to "potential downstream events" (cf `Deciphering_CIMP_Analysis.ipynb` documentation). 
+- downstream_gene_path_dir = path to the folder to save the results of the analysis.
 
 #### UPDATE AFTER REVIEW: Supplementary information 
 In the archive `Supplementary_information.zip`, you will find the methylation cluster membership, silhouette score, significantly differentially methylated CpG ids used for the CIMP score computations and CIMP score of all the analyzed patients in TCGA. You will also find the full list of enriched pathways discovered with the EASE score analysis for LGG and LIHC. Cluster membership and silhouette scores are in the `methylation_cluster_membership_all_TCGA.csv` file, in columns "Cluster" and "Sil_orig". The significant CpG ids are saved in a single file per cancer in the `sign_CIMP_cpg` folder. The CIMP scores are saved in a single file per cancer in the `CIMPness` folder. The LGG and LIHC EASE score results are saved in a single file per cancer in the `EASE` folder.
