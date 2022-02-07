@@ -1,5 +1,5 @@
 # Deciphering the etiology and role in oncogenic transformation of the CpG island methylator phenotype (CIMP): a pan-cancer analysis
-This repository contains the Jupyter Notebooks/scripts used for the analysis in "Deciphering the etiology and role in oncogenic transformation of the CpG island methylator phenotype (CIMP): a pan-cancer analysis".
+This repository contains the Jupyter Notebooks/scripts used for the analysis in "Deciphering the etiology and role in oncogenic transformation of the CpG island methylator phenotype (CIMP): a pan-cancer analysis" [1](https://doi.org/10.1093/bib/bbab610).
 
 ### How to
 The code presented is shared for reproducibility purposes and is in no way tailored for wide-spread use, nor is it organized as a package. Please contact josephine.yates@inf.ethz.ch for more information.
